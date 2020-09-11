@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Mi Carrito</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+
+<body>
+
+	<div class="container">
+		<h1 class="mt-4">Mi Carrito</h1>
+		<button type="button" class="btn btn-dark mt-2">
+			Contiene <span id="cantidad" class="badge badge-light"></span> productos
+		</button>
+		<br>
+		<button type="button" class="btn btn-info mt-4">Pagar</button>
+		<button type="button" class="btn btn-danger mt-4">Borrar Carrito</button>
+	</div>
+
+	<script>
+		let cantidadDOM = document.getElementById("cantidad");
+		let guardado = localStorage.getItem('items');
+		// console.log(JSON.parse(guardado));
+		let guardadoParse = JSON.parse(guardado);
+
+		cantidadDOM.innerHTML = `${guardadoParse.length}`;
+	</script>
+</body>
+
+</html>

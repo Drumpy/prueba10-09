@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Factura</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+
+<body>
+
+	<div class="container">
+		<h1 class="mt-4">Factura</h1>
+
+		<div class="row col-4 mt-4">
+			<div class="input-group mb-3">
+				<div class="input-group-prepend">
+					<span class="input-group-text">Producto</span>
+				</div>
+				<input type="text" class="form-control" id="producto" placeholder="Ingrese el Producto">
+			</div>
+		</div>
+
+		<div class="row col-4">
+			<div class="input-group mb-3">
+				<div class="input-group-prepend">
+					<span class="input-group-text">Precio</span>
+				</div>
+				<input type="number" class="form-control" id="precio" placeholder="Ingrese el Precio">
+			</div>
+		</div>
+
+		<button type="button" class="btn btn-success" onclick="guardar();">Guardar</button>
+		<button type="button" class="btn btn-primary" onclick="ordenar();">Ordenar por Precio</button>
+		<button type="button" class="btn btn-secondary" onclick="ordenonombre();">Ordenar por Nombre</button>
+
+		<a class="btn btn-dark" href="carrito.html">Ir al Carrito</a>
+
+		<div id="lista"></div>
+	</div>
+
+	<script src="script.js"></script>
+</body>
+
+</html>
