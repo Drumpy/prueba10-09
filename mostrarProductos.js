@@ -9,7 +9,7 @@ function mostrar(lista) {
 	</thead>
 	<tbody>`;
 	for (let item of lista) {
-		tabla += `<tr><td>${item.nombre}</td><td>${item.precio}</td></tr>`;
+		tabla += `<tr><td>${item.nombre}</td><td>$ ${item.precio}</td></tr>`;
 	}
 	tabla += `</tbody></table>`;
 
