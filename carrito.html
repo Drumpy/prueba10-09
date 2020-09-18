@@ -15,8 +15,10 @@
 		Contiene <span id="cantidad" class="badge badge-success"></span> productos
 		<div id="lista"></div>
 
-		<button type="button" class="btn btn-info mt-4">Pagar</button>
+		<button type="button" class="btn btn-info mt-4" onclick="pagar();">Pagar</button>
 		<button type="button" class="btn btn-danger mt-4" onclick="borrarCarrito();">Borrar Carrito</button>
+
+		<h1 id="pagar"></h1>
 
 	</div>
 
@@ -34,6 +36,14 @@
 			localStorage.setItem('items', JSON.stringify(lista));
 			cantidadDOM.innerHTML = `0`;
 			mostrar(lista);
+		}
+
+		function pagar() {
+			var pagar = document.getElementById("pagar");
+			var total = 0;
+
+			guardadoParse.map(elem => total += +elem.precio);
+			pagar.innerHTML = total;
 		}
 	</script>
 </body>
